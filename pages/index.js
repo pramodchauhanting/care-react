@@ -18,6 +18,16 @@ import authentic_spices from "../public/home/authentic_spices.gif";
 import artificial_flavours from "../public/home/artificial_flavours.gif";
 import preservatives from "../public/home/preservatives.gif";
 
+import video_banner from "../public/home/video_banner.jpg";
+import video_mobile_banner from "../public/home/video_mobile_banner.jpg";
+import play_icon from "../public/home/play_icon.png";
+import video_bg from "../public/home/video_bg.png";
+
+import call1 from "../public/home/call.png";
+import mail1 from "../public/home/mail.png";
+import location1 from "../public/home/location.png";
+import contact_image from "../public/home/contact_image.jpg";
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -189,6 +199,120 @@ export default function Home() {
                 </div>
                 <p className={`${styles.para} para`} data-scroll>
                   No preservatives
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={`${styles.unique_description}`} id="video">
+          <div className="container">
+            <div className={`${styles.unique_description_flex}`}>
+              <div
+                className={`${styles.unique_description_content} toTop`}
+                data-scroll
+              >
+                <h2 className={`${styles.heading_section} heading_section`}>
+                  A sip of serenity
+                </h2>
+                <p className={`${styles.para} para para_opacity`}>
+                  The hustle and bustle of everyday life can leave you feeling
+                  stressed, so steal a moment to relax, unwind and sip the taste
+                  of heaven with a cup of Care tea.
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.video_main} pt_20`}>
+              <img
+                src={video_banner.src}
+                className={`${styles.video_banner} mobile_none img-responsive`}
+                alt=""
+              />
+              <img
+                src={video_mobile_banner.src}
+                className={`${styles.video_banner} mobile_show img-responsive`}
+                alt=""
+              />
+              <div className={`${styles.play_icon}`}>
+                <a
+                  data-fancybox
+                  href="https://www.youtube.com/watch?v=7zGwTxBJqHo"
+                >
+                  <img src={play_icon.src} alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className={`${styles.video_wave}`}>
+            <img src={video_bg.src} alt="" />
+          </div>
+        </section>
+
+        <section className={`${styles.contact_us_main}`} id="contact_us">
+          <div className="container">
+            <div className={`${styles.contact_flex}`}>
+              <div className={`${styles.contact_content}`}>
+                <h2 className={`${styles.heading_section} heading_section`}>
+                  How can we help?
+                </h2>
+                <p className={`${styles.para} para link_txt`}>
+                  {/* <img src="img/home/call.png" alt="call">  */}
+                  <img src={call1.src} alt="" />
+                  <a
+                    className={`${styles.para} para`}
+                    href="tel:+91-7043991157"
+                  >
+                    +91-7043991157
+                  </a>
+                </p>
+                <p className={`${styles.para} para link_txt`}>
+                  {/* <img src="img/home/mail.png" alt="mail"> */}
+                  <img src={mail1.src} alt="" />
+                  <a
+                    className={`${styles.para} para`}
+                    href="mailto:customer.care@banlab.com   "
+                  >
+                    customer.care@banlab.com{" "}
+                  </a>
+                </p>
+                <p className={`${styles.para} para link_txt flex_start`}>
+                  {/* <img src="img/home/location.png" alt="mail"> */}
+                  <img src={location1.src} alt="" />
+                  <a
+                    className={`${styles.para} para`}
+                    href="javascript:void(0)"
+                  >
+                    Ban House, Opp. Swaminarayan Temple, Kalawad Road, Rajkot
+                    360001. (Gujarat) INDIA
+                  </a>
+                </p>
+              </div>
+              <div className={`${styles.contact_img} toTop`} data-scroll>
+                <img
+                  src={contact_image.src}
+                  className="img-responsive"
+                  alt=""
+                />
+                {/* <img src="img/home/contact_image.jpg" class="img-responsive" alt=" contact img"> */}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={`${styles.best_sellers} ptb_100`}>
+          <div className={`${styles.container_main}`}>
+            <div className="container">
+              <div className={`${styles.popular_title}`}>
+                <h2
+                  className={`${styles.heading_section} heading_section f_w_b`}
+                >
+                  What’s in the cup?
+                </h2>
+                <p className={`${styles.para} para`}>
+                  Care has a variety of herbal tea flavours to match your tastes
+                  and moods. Feel free to choose from our sophisticated
+                  selection of teas, or even better, enjoy them all!
                 </p>
               </div>
             </div>

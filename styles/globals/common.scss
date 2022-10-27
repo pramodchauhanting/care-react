@@ -635,3 +635,27 @@ font-weight: 900;
     }
   }
 }
+
+.link_txt{
+  display: flex;
+  align-items: center;
+  color: var(--white-color);
+  img{
+    padding-right: 10px;
+  }
+  a{
+      color: var(--white-color);
+      text-decoration: none;
+      font-size: 20px;
+      line-height: 36px;
+      @media only screen and (max-width: 991px) {
+          font-size: 18px;
+      }
+  }
+}
+.flex_start{
+  align-items: flex-start;
+  img{
+      margin-top:10px;
+  }
+}
