@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+:root {
+  --libre_baskerville_bold: "LibreBaskerville-Bold";
+  --libre_baskerville_regular: "LibreBaskerville-Regular";
+  --libre_baskerville_italic: "LibreBaskerville-Italic";
+  --robot: "Roboto", sans-serif;
+
+  --primary-color: #0e0a2e;
+  --secondary-color: #604e24;
+  --white-color: #fff;
+  --color-black: #100007;
+  --bg-color: #faf6eb;
+  --text-color: #151046;
+
+  //extras
+  --container_width: 100%;
+  --transition: ease all 300ms;
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    --container_width: 750px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    --container_width: 970px;
+  }
+
+  @media (min-width: 1200px) {
+    --container_width: 1170px;
+  }
+
+  // @media (min-width: 1680px) {
+  //   --container_width: 1360px;
+  // }
+
+  --container_left_space: calc((100% - var(--container_width)) / 2);
+
+}
+
+//commonly used bootstrap 3 css
+
+// * {
+//     box-sizing: border-box;
+// }
+
+

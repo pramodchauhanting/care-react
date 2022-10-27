@@ -1,0 +1,21 @@
+@import "variables.scss"; 
+@import "fontface.scss";
+@import "common.scss";
+
+
+
+.container-fluid {
+  width: 100%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container {
+  @extend .container-fluid;
+  margin: 0 auto;
+  width: var(--container_width);
+}
+
+
+

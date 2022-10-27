@@ -1,0 +1,230 @@
+// Section: Header
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: 999;
+  background-color: var(--bg-color);
+  //   margin: 0 auto;
+  @media only screen and (max-width: 991px) {
+    box-shadow: 0 0 16px rgba(24, 21, 131, 0.25);
+    padding-bottom: 5px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    max-width: 100%;
+    height: auto;
+    padding: 0px 0 0px;
+
+    @media only screen and (max-width: 991px) {
+      position: relative;
+      justify-content: flex-start;
+      padding: 15px 0 5px;
+    }
+  }
+
+  .brand {
+    display: block;
+    img {
+      width: 83px;
+      // @media only screen and (max-width: 767px) {
+      //   width: 75px;
+      //  }
+    }
+  }
+
+  .burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: auto;
+    border: none;
+    opacity: 1;
+    visibility: visible;
+    background-color: unset;
+    @media only screen and (min-width: 992px) {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @media only screen and (max-width: 991px) {
+      position: absolute;
+      right: 0px;
+      padding: 0;
+    }
+
+    &_line {
+      display: block;
+      cursor: pointer;
+      width: 100%;
+      height: 2px;
+      margin: 6px auto;
+      transform: rotate(0deg);
+      transition: all 0.3s ease-in-out;
+      background-color: var(--primary-color);
+    }
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -19rem;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity: 0;
+    overflow-y: auto;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    background-color: #faf6eb;
+    padding: 28px 0px;
+    @media only screen and (min-width: 992px) {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: auto;
+      opacity: 1;
+      visibility: visible;
+      background: none;
+      box-shadow: none;
+      width: 100%;
+      text-align: right;
+    }
+    @media only screen and (max-width: 991px) {
+      width: 90%;
+    }
+
+    &.is-active {
+      left: 0rem;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &_block {
+      width: 100%;
+      height: auto;
+      margin: 2rem 0;
+
+      @media only screen and (min-width: 768px) {
+        margin: 0 auto;
+        padding: 0;
+      }
+      @media only screen and (max-width: 991px) {
+        margin: 0 auto;
+        padding: 0;
+      }
+    }
+
+    &_item {
+      display: block;
+      margin: 0;
+
+      @media only screen and (min-width: 991px) {
+        position: relative;
+        display: inline-block;
+        padding: 0px 15px;
+        color: var(--secondary-color);
+      }
+
+      @media only screen and (max-width: 1199px) {
+        padding: 0px 5px;
+        font-size: 15px;
+      }
+
+      @media only screen and (max-width: 991px) {
+        display: block;
+        opacity: 1;
+      }
+    }
+
+    &_link {
+      display: block;
+      font-size: 16px;
+      border: none;
+      transition: all 0.35s ease;
+      text-decoration: none;
+      color: var(--secondary-color);
+      font-weight: normal;
+      font-family: var(--robot);
+      &:hover {
+      }
+      @media only screen and (max-width: 1199px) {
+        font-size: 15px;
+      }
+
+      @media only screen and (max-width: 991px) {
+        padding: 10px 15px;
+        font-size: 18px;
+      }
+
+      // @media only screen and (min-width: 768px) {
+      //   padding: 0.5rem 0;
+      // }
+    }
+    .btn_txt {
+      background-color: #e48b22;
+      font-weight: 700;
+      color: var(--white-color);
+      @media only screen and (max-width: 1199px) {
+        padding: 10px 40px;
+      }
+      @media only screen and (max-width: 991px) {
+        display: inline-block;
+      }
+    }
+  }
+
+  .left_menu {
+    text-align: left;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 0.35s ease-in-out;
+
+    &.is-active {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  // .mobile_none{
+  //   @media only screen and (max-width: 991px) {
+  //     display: none;
+  //   }
+  // }
+  // .monile_show{
+  //   display: none;
+  //   @media only screen and (max-width: 991px) {
+  //     display: block;
+  //   }
+  // }
+}
+
+.close_menu_icon {
+  display: none !important;
+  @media only screen and (max-width: 991px) {
+    display: block !important;
+    font-size: 30px !important;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: #fff;
+  }
+}
