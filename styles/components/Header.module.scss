@@ -39,53 +39,132 @@
     }
   }
 
+  // .burger {
+  //   position: relative;
+  //   display: block;
+  //   cursor: pointer;
+  //   width: 30px;
+  //   height: auto;
+  //   border: none;
+  //   opacity: 1;
+  //   visibility: visible;
+  //   background-color: unset;
+  //   @media only screen and (min-width: 992px) {
+  //     display: none;
+  //     opacity: 0;
+  //     visibility: hidden;
+  //   }
+
+  //   @media only screen and (max-width: 991px) {
+  //     position: absolute;
+  //     right: 0px;
+  //     padding: 0;
+  //   }
+
+  //   &_line {
+  //     display: block;
+  //     cursor: pointer;
+  //     width: 100%;
+  //     height: 2px;
+  //     margin: 6px auto;
+  //     transform: rotate(0deg);
+  //     transition: all 0.3s ease-in-out;
+  //     background-color: var(--primary-color);
+  //   }
+  //   &.close_icon {
+  //     .burger_line {
+  //       opacity: 0;
+  //       &:nth-child(2) {
+  //         opacity: 1;
+  //         &:after {
+  //           transform: rotate(45deg);
+  //         }
+  //       }
+  //       &:nth-child(4) {
+  //         opacity: 1;
+  //         &:after {
+  //           transform: rotate(-45deg);
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
   .burger {
-    position: relative;
-    display: block;
-    cursor: pointer;
-    width: 30px;
-    height: auto;
     border: none;
-    opacity: 1;
-    visibility: visible;
-    background-color: unset;
+    background-color: transparent;
+    position: relative;
+    margin-top: -15px;
     @media only screen and (min-width: 992px) {
       display: none;
-      opacity: 0;
-      visibility: hidden;
     }
-
-    @media only screen and (max-width: 991px) {
-      position: absolute;
-      right: 0px;
-      padding: 0;
+    // transform: rotate(90deg);
+    &.close_icon {
+      .burger_line {
+        opacity: 0;
+        &:nth-child(2) {
+          opacity: 1;
+          &:after {
+            transform: rotate(45deg);
+          }
+        }
+        &:nth-child(4) {
+          opacity: 1;
+          &:after {
+            transform: rotate(-45deg);
+          }
+        }
+      }
     }
+    .burger_line {
+      position: relative;
+      &:after {
+        content: "";
+        width: 25px;
+        height: 2px;
+        right: 0;
+        top: 0;
+        transition: linear 0.3s;
+        position: absolute;
+        background-color: var(--primary-color);
+      }
+      &:nth-child(2) {
+        top: 8px;
+      }
+      &:nth-child(3) {
+        top: 16px;
+      }
+      &:nth-child(4) {
+        top: 8px;
+      }
+    }
+  }
 
-    &_line {
-      display: block;
-      cursor: pointer;
+  @media only screen and (max-width: 991px) {
+    .mobile_wrap {
       width: 100%;
-      height: 2px;
-      margin: 6px auto;
-      transform: rotate(0deg);
-      transition: all 0.3s ease-in-out;
-      background-color: var(--primary-color);
+      position: relative;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 
   .menu {
     position: fixed;
     top: 0;
-    left: -19rem;
+    left: 0rem;
     width: 100%;
     height: 100%;
     z-index: 999;
-    opacity: 0;
-    overflow-y: auto;
-    visibility: hidden;
+    // opacity: 0;
+    // overflow-y: auto;
+    // visibility: hidden;
     transition: all 0.5s ease;
     background-color: #faf6eb;
     padding: 28px 0px;
+
     @media only screen and (min-width: 992px) {
       position: relative;
       top: 0;
@@ -99,13 +178,14 @@
       text-align: right;
     }
     @media only screen and (max-width: 991px) {
-      width: 90%;
+      transform: translateX(-100%);
     }
 
-    &.is-active {
-      left: 0rem;
-      opacity: 1;
-      visibility: visible;
+    &.active {
+      // left: 0rem;
+      // opacity: 1;
+      // visibility: visible;
+      transform: translateX(0%);
     }
 
     &_block {
@@ -198,7 +278,7 @@
     background: rgba(0, 0, 0, 0.7);
     transition: all 0.35s ease-in-out;
 
-    &.is-active {
+    &.active {
       display: block;
       opacity: 1;
       visibility: visible;
