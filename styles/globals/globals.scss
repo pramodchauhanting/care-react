@@ -17,5 +17,27 @@
   width: var(--container_width);
 }
 
+.react-tabs__tab-list{
+  border-bottom: 1px solid rgba(96, 78, 36, 0.2) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.react-tabs__tab{
+  width: 25%;
+  text-align: center;
+  padding: 25px 0px !important;
+  color: #604E24 !important;
+}
+
+.react-tabs__tab--selected {
+  background: transparent !important;
+    border: none !important;
+    bottom: 0px !important;
+    border-bottom: 1px solid #E48B22 !important;
+}
+.react-tabs__tab:focus:after {
+  display: none;
+}
 

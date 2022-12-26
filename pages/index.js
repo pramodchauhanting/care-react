@@ -3,6 +3,8 @@ import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "../styles/Index.module.scss";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 //image import
 import bottom_wave from "../public/home/bottom_wave.png";
@@ -29,6 +31,7 @@ import location1 from "../public/home/location.png";
 import contact_image from "../public/home/contact_image.jpg";
 import product_img from "../public/home/product/Product_Image_Japanese_Matcha_Green_Tea.jpg";
 import product_img_hover from "../public/home/product_hover/Hover_Image_Japanese_Matcha_Green_Tea.jpg";
+import amazon_logo from "../public/home/amazon_logo.png";
 
 export default function Home() {
   return (
@@ -267,162 +270,196 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className={`${styles.best_sellers_flex}`}>
-                <div className={`${styles.best_sellers_box}`}>
-                  <div className={`${styles.best_sellers_content}`}>
-                    <div className={`${styles.best_sellers_product}`}>
-                      <img
-                        src={product_img.src}
-                        className="img-responsive"
-                        alt=""
-                      />
-                      <img
-                        src={product_img_hover.src}
-                        className={`${styles.hover_img}`}
-                        alt=""
-                      />
-                    </div>
-                    <div className={`${styles.box_new_content}`}>
-                      <p className={`${styles.p_name} para`}>
-                        Japanese Matcha Green Tea
-                      </p>
-                      <div className={`${styles.quantity}`}>
-                        <p className={`${styles.txt_num} para`}>10 Tea bags</p>
-                        <ul>
-                          <li>14g</li>
-                        </ul>
-                      </div>
-                      <p className={`${styles.price_txt} para`}>₹250.00</p>
-                    </div>
-                    <div className={`${styles.btn_section}`}>
-                      <a
-                        target="_blank"
-                        href="https://www.amazon.in/stores/care/page/E034A3E9-05F2-4B04-82BC-5B1A6C6FE8D8?ref_=ast_bln"
-                        className={`${styles.btn_txt_one} btn_txt`}
-                      >
-                        Shop Now on
-                        {/* <img src="img/home/amazon_logo.png" alt=""> */}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className={`${styles.best_sellers_box}`}>
-                  <div className={`${styles.best_sellers_content}`}>
-                    <div className={`${styles.best_sellers_product}`}>
-                      <img
-                        src={product_img.src}
-                        className="img-responsive"
-                        alt=""
-                      />
-                      <img
-                        src={product_img_hover.src}
-                        className={`${styles.hover_img}`}
-                        alt=""
-                      />
-                    </div>
-                    <div className={`${styles.box_new_content}`}>
-                      <p className={`${styles.p_name} para`}>
-                        Japanese Matcha Green Tea
-                      </p>
-                      <div className={`${styles.quantity}`}>
-                        <p className={`${styles.txt_num} para`}>10 Tea bags</p>
-                        <ul>
-                          <li>14g</li>
-                        </ul>
-                      </div>
-                      <p className={`${styles.price_txt} para`}>₹250.00</p>
-                    </div>
-                    <div className={`${styles.btn_section}`}>
-                      <a
-                        target="_blank"
-                        href="https://www.amazon.in/stores/care/page/E034A3E9-05F2-4B04-82BC-5B1A6C6FE8D8?ref_=ast_bln"
-                        className={`${styles.btn_txt_one} btn_txt`}
-                      >
-                        Shop Now on
-                        {/* <img src="img/home/amazon_logo.png" alt=""> */}
-                      </a>
-                    </div>
-                  </div>
-                </div>
+              <Tabs className={`${styles.tab_custom_list}`}>
+                <TabList>
+                  <Tab>All</Tab>
+                  <Tab>Organic Turmeric Tea</Tab>
+                  <Tab>Herbal Green Tea</Tab>
+                  <Tab>2 in 1 Hot & Iced Premix</Tab>
+                </TabList>
 
-                <div className={`${styles.best_sellers_box}`}>
-                  <div className={`${styles.best_sellers_content}`}>
-                    <div className={`${styles.best_sellers_product}`}>
-                      <img
-                        src={product_img.src}
-                        className="img-responsive"
-                        alt=""
-                      />
-                      <img
-                        src={product_img_hover.src}
-                        className={`${styles.hover_img}`}
-                        alt=""
-                      />
-                    </div>
-                    <div className={`${styles.box_new_content}`}>
-                      <p className={`${styles.p_name} para`}>
-                        Japanese Matcha Green Tea
-                      </p>
-                      <div className={`${styles.quantity}`}>
-                        <p className={`${styles.txt_num} para`}>10 Tea bags</p>
-                        <ul>
-                          <li>14g</li>
-                        </ul>
+                <TabPanel>
+                  <div className={`${styles.best_sellers_flex}`}>
+                    <div className={`${styles.best_sellers_box}`}>
+                      <div className={`${styles.best_sellers_content}`}>
+                        <div className={`${styles.best_sellers_product}`}>
+                          <img
+                            src={product_img.src}
+                            className="img-responsive"
+                            alt=""
+                          />
+                          <img
+                            src={product_img_hover.src}
+                            className={`${styles.hover_img}`}
+                            alt=""
+                          />
+                        </div>
+                        <div className={`${styles.box_new_content}`}>
+                          <p className={`${styles.p_name} para`}>
+                            Japanese Matcha Green Tea
+                          </p>
+                          <div className={`${styles.quantity}`}>
+                            <p className={`${styles.txt_num} para`}>
+                              10 Tea bags
+                            </p>
+                            <ul>
+                              <li>14g</li>
+                            </ul>
+                          </div>
+                          <p className={`${styles.price_txt} para`}>₹250.00</p>
+                        </div>
+                        <div className={`${styles.btn_section}`}>
+                          <a
+                            target="_blank"
+                            href="https://www.amazon.in/stores/care/page/E034A3E9-05F2-4B04-82BC-5B1A6C6FE8D8?ref_=ast_bln"
+                            className={`${styles.btn_txt_one} btn_txt`}
+                          >
+                            Shop Now on
+                            <img src={amazon_logo.src} alt="" />
+                            {/* <img src="img/home/amazon_logo.png" alt=""> */}
+                          </a>
+                        </div>
                       </div>
-                      <p className={`${styles.price_txt} para`}>₹250.00</p>
                     </div>
-                    <div className={`${styles.btn_section}`}>
-                      <a
-                        target="_blank"
-                        href="https://www.amazon.in/stores/care/page/E034A3E9-05F2-4B04-82BC-5B1A6C6FE8D8?ref_=ast_bln"
-                        className={`${styles.btn_txt_one} btn_txt`}
-                      >
-                        Shop Now on
-                        {/* <img src="img/home/amazon_logo.png" alt=""> */}
-                      </a>
-                    </div>
-                  </div>
-                </div>
 
-                <div className={`${styles.best_sellers_box}`}>
-                  <div className={`${styles.best_sellers_content}`}>
-                    <div className={`${styles.best_sellers_product}`}>
-                      <img
-                        src={product_img.src}
-                        className="img-responsive"
-                        alt=""
-                      />
-                      <img
-                        src={product_img_hover.src}
-                        className={`${styles.hover_img}`}
-                        alt=""
-                      />
-                    </div>
-                    <div className={`${styles.box_new_content}`}>
-                      <p className={`${styles.p_name} para`}>
-                        Japanese Matcha Green Tea
-                      </p>
-                      <div className={`${styles.quantity}`}>
-                        <p className={`${styles.txt_num} para`}>10 Tea bags</p>
-                        <ul>
-                          <li>14g</li>
-                        </ul>
+                    <div className={`${styles.best_sellers_box}`}>
+                      <div className={`${styles.best_sellers_content}`}>
+                        <div className={`${styles.best_sellers_product}`}>
+                          <img
+                            src={product_img.src}
+                            className="img-responsive"
+                            alt=""
+                          />
+                          <img
+                            src={product_img_hover.src}
+                            className={`${styles.hover_img}`}
+                            alt=""
+                          />
+                        </div>
+                        <div className={`${styles.box_new_content}`}>
+                          <p className={`${styles.p_name} para`}>
+                            Japanese Matcha Green Tea
+                          </p>
+                          <div className={`${styles.quantity}`}>
+                            <p className={`${styles.txt_num} para`}>
+                              10 Tea bags
+                            </p>
+                            <ul>
+                              <li>14g</li>
+                            </ul>
+                          </div>
+                          <p className={`${styles.price_txt} para`}>₹250.00</p>
+                        </div>
+                        <div className={`${styles.btn_section}`}>
+                          <a
+                            target="_blank"
+                            href="https://www.amazon.in/stores/care/page/E034A3E9-05F2-4B04-82BC-5B1A6C6FE8D8?ref_=ast_bln"
+                            className={`${styles.btn_txt_one} btn_txt`}
+                          >
+                            Shop Now on
+                            <img src={amazon_logo.src} alt="" />
+                            {/* <img src="img/home/amazon_logo.png" alt=""> */}
+                          </a>
+                        </div>
                       </div>
-                      <p className={`${styles.price_txt} para`}>₹250.00</p>
                     </div>
-                    <div className={`${styles.btn_section}`}>
-                      <a
-                        target="_blank"
-                        href="https://www.amazon.in/stores/care/page/E034A3E9-05F2-4B04-82BC-5B1A6C6FE8D8?ref_=ast_bln"
-                        className={`${styles.btn_txt_one} btn_txt`}
-                      >
-                        Shop Now on
-                        {/* <img src="img/home/amazon_logo.png" alt=""> */}
-                      </a>
+
+                    <div className={`${styles.best_sellers_box}`}>
+                      <div className={`${styles.best_sellers_content}`}>
+                        <div className={`${styles.best_sellers_product}`}>
+                          <img
+                            src={product_img.src}
+                            className="img-responsive"
+                            alt=""
+                          />
+                          <img
+                            src={product_img_hover.src}
+                            className={`${styles.hover_img}`}
+                            alt=""
+                          />
+                        </div>
+                        <div className={`${styles.box_new_content}`}>
+                          <p className={`${styles.p_name} para`}>
+                            Japanese Matcha Green Tea
+                          </p>
+                          <div className={`${styles.quantity}`}>
+                            <p className={`${styles.txt_num} para`}>
+                              10 Tea bags
+                            </p>
+                            <ul>
+                              <li>14g</li>
+                            </ul>
+                          </div>
+                          <p className={`${styles.price_txt} para`}>₹250.00</p>
+                        </div>
+                        <div className={`${styles.btn_section}`}>
+                          <a
+                            target="_blank"
+                            href="https://www.amazon.in/stores/care/page/E034A3E9-05F2-4B04-82BC-5B1A6C6FE8D8?ref_=ast_bln"
+                            className={`${styles.btn_txt_one} btn_txt`}
+                          >
+                            Shop Now on
+                            <img src={amazon_logo.src} alt="" />
+                            {/* <img src="img/home/amazon_logo.png" alt=""> */}
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className={`${styles.best_sellers_box}`}>
+                      <div className={`${styles.best_sellers_content}`}>
+                        <div className={`${styles.best_sellers_product}`}>
+                          <img
+                            src={product_img.src}
+                            className="img-responsive"
+                            alt=""
+                          />
+                          <img
+                            src={product_img_hover.src}
+                            className={`${styles.hover_img}`}
+                            alt=""
+                          />
+                        </div>
+                        <div className={`${styles.box_new_content}`}>
+                          <p className={`${styles.p_name} para`}>
+                            Japanese Matcha Green Tea
+                          </p>
+                          <div className={`${styles.quantity}`}>
+                            <p className={`${styles.txt_num} para`}>
+                              10 Tea bags
+                            </p>
+                            <ul>
+                              <li>14g</li>
+                            </ul>
+                          </div>
+                          <p className={`${styles.price_txt} para`}>₹250.00</p>
+                        </div>
+                        <div className={`${styles.btn_section}`}>
+                          <a
+                            target="_blank"
+                            href="https://www.amazon.in/stores/care/page/E034A3E9-05F2-4B04-82BC-5B1A6C6FE8D8?ref_=ast_bln"
+                            className={`${styles.btn_txt_one} btn_txt`}
+                          >
+                            Shop Now on
+                            <img src={amazon_logo.src} alt="" />
+                            {/* <img src="img/home/amazon_logo.png" alt=""> */}
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </TabPanel>
+
+                <TabPanel>
+                  <h2>Any content 2</h2>
+                </TabPanel>
+                <TabPanel>
+                  <h2>Any content 3</h2>
+                </TabPanel>
+                <TabPanel>
+                  <h2>Any content 4</h2>
+                </TabPanel>
+              </Tabs>
             </div>
           </div>
         </section>
