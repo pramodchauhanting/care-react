@@ -505,6 +505,7 @@
 
         .best_sellers_flex{
             position: relative;
+            display: flex;
             .slick-track {
                 margin-left: 0;
             }
@@ -549,6 +550,9 @@
                         font-weight: 700;
                         min-height: 56px;
                         line-height: 20px;
+                        font-size: 16px;
+                        color: #2F2F2F;
+                        margin: 0px;
                     }
                     .para{
                         font-size: 16px;
@@ -559,6 +563,7 @@
                         margin-top: 0px;
                         color: #8B8B8B;
                         font-size: 14px;
+                        margin: 0px;
                     }
                     .quantity{
                         display: flex;
@@ -576,6 +581,7 @@
                         font-size: 16px;
                         font-weight: 500;
                         color: #2F2F2F;
+                        margin-bottom: 0px;
                         @media screen and (max-width: 767px) {
                             font-size: 16px;
                         }
@@ -600,7 +606,7 @@
                         opacity: 0;
                         transition: all 0.5s ease-out;
                         transform: translateY(36px);
-                        .btn_txt {
+                        .btn_txt_one {
                             width: 100%;
                             border-radius: 0px;
                             background-color: #E48B22;

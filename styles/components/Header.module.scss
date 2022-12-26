@@ -179,6 +179,7 @@
     }
     @media only screen and (max-width: 991px) {
       transform: translateX(-100%);
+      padding: 84px 0px 30px;
     }
 
     &.active {
@@ -192,7 +193,7 @@
       width: 100%;
       height: auto;
       margin: 2rem 0;
-
+      
       @media only screen and (min-width: 768px) {
         margin: 0 auto;
         padding: 0;
@@ -200,6 +201,7 @@
       @media only screen and (max-width: 991px) {
         margin: 0 auto;
         padding: 0;
+        border-top: 1px solid #cfcdcd;
       }
     }
 
@@ -222,6 +224,7 @@
       @media only screen and (max-width: 991px) {
         display: block;
         opacity: 1;
+        padding: 0px 0px;
       }
     }
 

@@ -27,6 +27,8 @@ import call1 from "../public/home/call.png";
 import mail1 from "../public/home/mail.png";
 import location1 from "../public/home/location.png";
 import contact_image from "../public/home/contact_image.jpg";
+import product_img from "../public/home/product/Product_Image_Japanese_Matcha_Green_Tea.jpg";
+import product_img_hover from "../public/home/product_hover/Hover_Image_Japanese_Matcha_Green_Tea.jpg";
 
 export default function Home() {
   return (
@@ -249,6 +251,182 @@ export default function Home() {
           </div>
         </section>
 
+        <section className={`${styles.best_sellers} ptb_100`}>
+          <div className={`${styles.container_main}`}>
+            <div className="container">
+              <div className={`${styles.popular_title}`}>
+                <h2
+                  className={`${styles.heading_section} heading_section f_w_b`}
+                >
+                  What’s in the cup?
+                </h2>
+                <p className={`${styles.para} para`}>
+                  Care has a variety of herbal tea flavours to match your tastes
+                  and moods. Feel free to choose from our sophisticated
+                  selection of teas, or even better, enjoy them all!
+                </p>
+              </div>
+
+              <div className={`${styles.best_sellers_flex}`}>
+                <div className={`${styles.best_sellers_box}`}>
+                  <div className={`${styles.best_sellers_content}`}>
+                    <div className={`${styles.best_sellers_product}`}>
+                      <img
+                        src={product_img.src}
+                        className="img-responsive"
+                        alt=""
+                      />
+                      <img
+                        src={product_img_hover.src}
+                        className={`${styles.hover_img}`}
+                        alt=""
+                      />
+                    </div>
+                    <div className={`${styles.box_new_content}`}>
+                      <p className={`${styles.p_name} para`}>
+                        Japanese Matcha Green Tea
+                      </p>
+                      <div className={`${styles.quantity}`}>
+                        <p className={`${styles.txt_num} para`}>10 Tea bags</p>
+                        <ul>
+                          <li>14g</li>
+                        </ul>
+                      </div>
+                      <p className={`${styles.price_txt} para`}>₹250.00</p>
+                    </div>
+                    <div className={`${styles.btn_section}`}>
+                      <a
+                        target="_blank"
+                        href="https://www.amazon.in/stores/care/page/E034A3E9-05F2-4B04-82BC-5B1A6C6FE8D8?ref_=ast_bln"
+                        className={`${styles.btn_txt_one} btn_txt`}
+                      >
+                        Shop Now on
+                        {/* <img src="img/home/amazon_logo.png" alt=""> */}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className={`${styles.best_sellers_box}`}>
+                  <div className={`${styles.best_sellers_content}`}>
+                    <div className={`${styles.best_sellers_product}`}>
+                      <img
+                        src={product_img.src}
+                        className="img-responsive"
+                        alt=""
+                      />
+                      <img
+                        src={product_img_hover.src}
+                        className={`${styles.hover_img}`}
+                        alt=""
+                      />
+                    </div>
+                    <div className={`${styles.box_new_content}`}>
+                      <p className={`${styles.p_name} para`}>
+                        Japanese Matcha Green Tea
+                      </p>
+                      <div className={`${styles.quantity}`}>
+                        <p className={`${styles.txt_num} para`}>10 Tea bags</p>
+                        <ul>
+                          <li>14g</li>
+                        </ul>
+                      </div>
+                      <p className={`${styles.price_txt} para`}>₹250.00</p>
+                    </div>
+                    <div className={`${styles.btn_section}`}>
+                      <a
+                        target="_blank"
+                        href="https://www.amazon.in/stores/care/page/E034A3E9-05F2-4B04-82BC-5B1A6C6FE8D8?ref_=ast_bln"
+                        className={`${styles.btn_txt_one} btn_txt`}
+                      >
+                        Shop Now on
+                        {/* <img src="img/home/amazon_logo.png" alt=""> */}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={`${styles.best_sellers_box}`}>
+                  <div className={`${styles.best_sellers_content}`}>
+                    <div className={`${styles.best_sellers_product}`}>
+                      <img
+                        src={product_img.src}
+                        className="img-responsive"
+                        alt=""
+                      />
+                      <img
+                        src={product_img_hover.src}
+                        className={`${styles.hover_img}`}
+                        alt=""
+                      />
+                    </div>
+                    <div className={`${styles.box_new_content}`}>
+                      <p className={`${styles.p_name} para`}>
+                        Japanese Matcha Green Tea
+                      </p>
+                      <div className={`${styles.quantity}`}>
+                        <p className={`${styles.txt_num} para`}>10 Tea bags</p>
+                        <ul>
+                          <li>14g</li>
+                        </ul>
+                      </div>
+                      <p className={`${styles.price_txt} para`}>₹250.00</p>
+                    </div>
+                    <div className={`${styles.btn_section}`}>
+                      <a
+                        target="_blank"
+                        href="https://www.amazon.in/stores/care/page/E034A3E9-05F2-4B04-82BC-5B1A6C6FE8D8?ref_=ast_bln"
+                        className={`${styles.btn_txt_one} btn_txt`}
+                      >
+                        Shop Now on
+                        {/* <img src="img/home/amazon_logo.png" alt=""> */}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={`${styles.best_sellers_box}`}>
+                  <div className={`${styles.best_sellers_content}`}>
+                    <div className={`${styles.best_sellers_product}`}>
+                      <img
+                        src={product_img.src}
+                        className="img-responsive"
+                        alt=""
+                      />
+                      <img
+                        src={product_img_hover.src}
+                        className={`${styles.hover_img}`}
+                        alt=""
+                      />
+                    </div>
+                    <div className={`${styles.box_new_content}`}>
+                      <p className={`${styles.p_name} para`}>
+                        Japanese Matcha Green Tea
+                      </p>
+                      <div className={`${styles.quantity}`}>
+                        <p className={`${styles.txt_num} para`}>10 Tea bags</p>
+                        <ul>
+                          <li>14g</li>
+                        </ul>
+                      </div>
+                      <p className={`${styles.price_txt} para`}>₹250.00</p>
+                    </div>
+                    <div className={`${styles.btn_section}`}>
+                      <a
+                        target="_blank"
+                        href="https://www.amazon.in/stores/care/page/E034A3E9-05F2-4B04-82BC-5B1A6C6FE8D8?ref_=ast_bln"
+                        className={`${styles.btn_txt_one} btn_txt`}
+                      >
+                        Shop Now on
+                        {/* <img src="img/home/amazon_logo.png" alt=""> */}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className={`${styles.contact_us_main}`} id="contact_us">
           <div className="container">
             <div className={`${styles.contact_flex}`}>
@@ -295,25 +473,6 @@ export default function Home() {
                   alt=""
                 />
                 {/* <img src="img/home/contact_image.jpg" class="img-responsive" alt=" contact img"> */}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className={`${styles.best_sellers} ptb_100`}>
-          <div className={`${styles.container_main}`}>
-            <div className="container">
-              <div className={`${styles.popular_title}`}>
-                <h2
-                  className={`${styles.heading_section} heading_section f_w_b`}
-                >
-                  What’s in the cup?
-                </h2>
-                <p className={`${styles.para} para`}>
-                  Care has a variety of herbal tea flavours to match your tastes
-                  and moods. Feel free to choose from our sophisticated
-                  selection of teas, or even better, enjoy them all!
-                </p>
               </div>
             </div>
           </div>

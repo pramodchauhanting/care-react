@@ -69,7 +69,7 @@ const Footer = () => {
                 Copyright 2022 © Care Pvt. Ltd.
               </p>
             </div>
-            <div class="strip_item">
+            <div className={`${styles.strip_item}`}>
               <a target="_blank" href="https://www.ting.in/">
                 <img src={ting.src} alt="" />
               </a>
