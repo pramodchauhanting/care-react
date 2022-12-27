@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-target-blank */
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import styles from "../styles/components/Footer.module.scss";
 
@@ -23,7 +25,7 @@ const Footer = () => {
                   className={`${styles.footer_logo} ban_logo toTop`}
                   data-scroll="in"
                 >
-                  <p class="para">A Venture of</p>
+                  <p className="para">A Venture of</p>
                   <img src={ban_logo.src} alt="" />
                 </div>
                 <p className={`${styles.para} top_space`}>

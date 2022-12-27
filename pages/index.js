@@ -5,6 +5,17 @@ import Slider from "react-slick";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
+//lightgallery import files
+import LightGallery from "lightgallery/react";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
+import lgVideo from "lightgallery/plugins/video";
+// import styles
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+import "lightgallery/css/lg-video.css";
+
 import Head from "next/head";
 import Image from "next/image";
 import Header from "../components/Header";
@@ -266,7 +277,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className={`${styles.video_main} pt_20`}>
+            {/* <div className={`${styles.video_main} pt_20`}>
               <img
                 src={video_banner.src}
                 className={`${styles.video_banner} mobile_none img-responsive`}
@@ -285,7 +296,27 @@ export default function Home() {
                   <img src={play_icon.src} alt="" />
                 </a>
               </div>
-            </div>
+            </div> */}
+
+            <LightGallery speed={500} plugins={[lgThumbnail, lgZoom, lgVideo]}>
+              <a href="https://www.youtube.com/watch?v=7zGwTxBJqHo">
+                <div className={`${styles.video_main} pt_20`}>
+                  <img
+                    src={video_banner.src}
+                    className={`${styles.video_banner} mobile_none img-responsive`}
+                    alt=""
+                  />
+                  <img
+                    src={video_mobile_banner.src}
+                    className={`${styles.video_banner} mobile_show img-responsive`}
+                    alt=""
+                  />
+                  <div className={`${styles.play_icon}`}>
+                    <img src={play_icon.src} alt="" />
+                  </div>
+                </div>
+              </a>
+            </LightGallery>
           </div>
           <div className={`${styles.video_wave}`}>
             <img src={video_bg.src} alt="" />
@@ -1066,7 +1097,6 @@ export default function Home() {
                   className="img-responsive"
                   alt=""
                 />
-                {/* <img src="img/home/contact_image.jpg" class="img-responsive" alt=" contact img"> */}
               </div>
             </div>
           </div>
