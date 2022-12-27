@@ -1091,7 +1091,7 @@ export default function Home() {
                   </a>
                 </p>
               </div>
-              <div className={`${styles.contact_img} toTop`} data-scroll>
+              <div className={`${styles.contact_img}`}>
                 <img
                   src={contact_image.src}
                   className="img-responsive"
