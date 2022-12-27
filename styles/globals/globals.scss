@@ -1,8 +1,6 @@
-@import "variables.scss"; 
+@import "variables.scss";
 @import "fontface.scss";
 @import "common.scss";
-
-
 
 .container-fluid {
   width: 100%;
@@ -17,27 +15,70 @@
   width: var(--container_width);
 }
 
-.react-tabs__tab-list{
+.react-tabs__tab-list {
   border-bottom: 1px solid rgba(96, 78, 36, 0.2) !important;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.react-tabs__tab{
+.react-tabs__tab {
   width: 25%;
   text-align: center;
   padding: 25px 0px !important;
-  color: #604E24 !important;
+  color: #604e24 !important;
 }
 
 .react-tabs__tab--selected {
   background: transparent !important;
-    border: none !important;
-    bottom: 0px !important;
-    border-bottom: 1px solid #E48B22 !important;
+  border: none !important;
+  bottom: 0px !important;
+  border-bottom: 1px solid #e48b22 !important;
 }
 .react-tabs__tab:focus:after {
   display: none;
 }
 
+.slick-arrow {
+  position: absolute;
+  bottom: -6%;
+  top: inherit;
+  // transform: translateY(-50%);
+  opacity: 0.7;
+  border: none;
+  background: transparent;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+    transition: all 0.5s ease-out;
+  }
+}
+.slick-prev {
+  right: 50px;
+  transform: rotate(180deg);
+  z-index: 1;
+  left: inherit;
+  bottom: -4%;
+  // @media screen and (max-width: 991px) {
+  //     left: -15px;
+  // }
+  // @media screen and (max-width: 767px) {
+  //     left: -10px;
+  // }
+}
+.slick-next {
+  right: 10px;
+  z-index: 1;
+  // @media screen and (max-width: 991px) {
+  //   right: -15px;
+  // }
+  // @media screen and (max-width: 767px) {
+  //   right: -10px;
+  // }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
