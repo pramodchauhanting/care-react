@@ -1,11 +1,25 @@
-import Link from "next/link";
+// import Link from "next/link";
 import styles from "../styles/components/Header.module.scss";
+
+import * as Scroll from "react-scroll";
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
+
 import logo from "../public/logo.png";
 // import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const Header = () => {
   const [sidebarActive, setSidebarActive] = useState(false);
+  let scroll = Scroll.animateScroll;
+
   return (
     <header className={`${styles.header}`}>
       <div className="container">
@@ -40,37 +54,104 @@ const Header = () => {
             id="menu"
           >
             {/* <div className={`${styles.close_menu_icon}`}>x</div> */}
+
             <ul className={`${styles.menu_block}`}>
               <li className={`${styles.menu_item}`}>
-                <a className={`${styles.menu_link}`} href="#about_us">
+                {/* <a className={`${styles.menu_link}`} href="#about_us">
                   About Us
-                </a>
+                </a> */}
+                <Link
+                  activeClass="active"
+                  to="about_us"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className={`${styles.menu_link}`}
+                >
+                  About Us
+                </Link>
               </li>
               <li className={`${styles.menu_item}`}>
-                <a className={`${styles.menu_link}`} href="#our_secret">
+                {/* <a className={`${styles.menu_link}`} href="#our_secret">
                   What’s Our Secret
-                </a>
+                </a> */}
+                <Link
+                  activeClass="active"
+                  to="our_secret"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className={`${styles.menu_link}`}
+                >
+                  What’s Our Secret
+                </Link>
               </li>
               <li className={`${styles.menu_item}`}>
-                <a className={`${styles.menu_link}`} href="#video">
+                {/* <a className={`${styles.menu_link}`} href="#video">
                   Video
-                </a>
+                </a> */}
+                <Link
+                  activeClass="active"
+                  to="video"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className={`${styles.menu_link}`}
+                >
+                  Video
+                </Link>
               </li>
               <li className={`${styles.menu_item}`}>
-                <a className={`${styles.menu_link}`} href="#product_collection">
+                {/* <a className={`${styles.menu_link}`} href="#product_collection">
                   Products
-                </a>
+                </a> */}
+                <Link
+                  activeClass="active"
+                  to="product_collection"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className={`${styles.menu_link}`}
+                >
+                  Products
+                </Link>
               </li>
               <li className={`${styles.menu_item}`}>
-                <a className={`${styles.menu_link}`} href="#testimonial">
+                {/* <a className={`${styles.menu_link}`} href="#testimonial">
                   Reviews
-                </a>
+                </a> */}
+                <Link
+                  activeClass="active"
+                  to="testimonial"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className={`${styles.menu_link}`}
+                >
+                  Reviews
+                </Link>
               </li>
 
               <li className={`${styles.menu_item}`}>
-                <a className={`${styles.menu_link}`} href="#contact_us">
+                {/* <a className={`${styles.menu_link}`} href="#contact_us">
                   Contact Us
-                </a>
+                </a> */}
+                <Link
+                  activeClass="active"
+                  to="contact_us"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className={`${styles.menu_link}`}
+                >
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>

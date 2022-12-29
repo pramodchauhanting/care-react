@@ -142,7 +142,7 @@ export default function Home() {
 
         <section
           className={`${styles.about_signature} pt_60 pb_100`}
-          id="about_us"
+          name="about_us"
         >
           <div className="container">
             <div className={`${styles.about_signature_flex}`}>
@@ -162,12 +162,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.unique_features} pb_100`}>
+        <section
+          className={`${styles.unique_features} pb_100`}
+          name="our_secret"
+        >
           <div className={`${styles.full_img}`}>
             <img src={tea_ayurveda_new.src} className="mobile_none" alt="" />
             <img src={tea_ayurveda_Mobile.src} className="mobile_show" alt="" />
           </div>
-          <div className={`${styles.tea_ayurveda_main}`} id="our_secret">
+          <div className={`${styles.tea_ayurveda_main}`}>
             <div className="container">
               <div className={`${styles.tea_ayurveda}`}>
                 <div
@@ -290,7 +293,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.unique_description}`} id="video">
+        <section className={`${styles.unique_description}`} name="video">
           <div className="container">
             <div className={`${styles.unique_description_flex}`}>
               <div
@@ -354,7 +357,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.best_sellers} ptb_100`}>
+        <section
+          className={`${styles.best_sellers} ptb_100`}
+          name="product_collection"
+        >
           <div className={`${styles.container_main}`}>
             <div className="container">
               <div className={`${styles.popular_title}`}>
@@ -1083,7 +1089,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.testimonials} pb_100`}>
+        <section className={`${styles.testimonials} pb_100`} name="testimonial">
           <div className="container">
             <div className={`${styles.testimonials_title}`}>
               <h2 className={`${styles.heading_section1} heading_section`}>
@@ -1280,7 +1286,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.contact_us_main}`} id="contact_us">
+        <section className={`${styles.contact_us_main}`} name="contact_us">
           <div className="container">
             <div className={`${styles.contact_flex}`}>
               <div className={`${styles.contact_content}`}>
