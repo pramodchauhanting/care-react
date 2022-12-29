@@ -82,3 +82,34 @@
 .slick-next:before {
   display: none;
 }
+
+.custom_new_arrow{
+  .slick-arrow{
+    left: 0;
+    bottom: 0;
+    top: initial;
+    right: inherit;
+    width: auto;
+    height: auto;
+    @media screen and (max-width: 767px) {
+        bottom: 0px;
+        top: -85%;
+    }
+}
+.slick-next{
+    left: 40px;
+    bottom: -10px;
+    @media screen and (max-width: 767px) {
+      left: initial;
+      bottom: -10px;
+      right: -6px;
+  }  
+}
+
+.slick-prev{
+  @media screen and (max-width: 767px) {
+    left: -6px;
+}  
+}
+
+}

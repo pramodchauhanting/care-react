@@ -4,6 +4,7 @@ import React from "react";
 import Slider from "react-slick";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import { useState, useEffect, useRef } from "react";
 
 //lightgallery import files
 import LightGallery from "lightgallery/react";
@@ -50,6 +51,9 @@ import product_img_hover from "../public/home/product_hover/Hover_Image_Japanese
 import amazon_logo from "../public/home/amazon_logo.png";
 import arrow_slider from "../public/home/arrow_slider.png";
 
+import coments_star from "../public/home/coments_star.png";
+import Anuj_Kumar_Saroj from "../public/home/Anuj_Kumar_Saroj.jpg";
+
 export default function Home() {
   var product_slider = {
     dots: false,
@@ -81,6 +85,33 @@ export default function Home() {
         },
       },
     ],
+  };
+
+  const [nav1, setNav1] = useState();
+  const [nav2, setNav2] = useState();
+  const [nav3, setNav3] = useState();
+  const sliderRef = useRef();
+  var settings1 = {
+    prevArrow: (
+      <img className="slickA ban_right_arrow" src={arrow_slider.src} />
+    ),
+    nextArrow: <img className="slickA ban_left_arrow" src={arrow_slider.src} />,
+    dots: false,
+  };
+  var settings2 = {
+    dots: false,
+    infinite: true,
+    arrows: false,
+  };
+  var settings3 = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    arrows: false,
+    // asNavFor: `${nav1}, ${nav2}`,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots: false,
   };
 
   return (
@@ -1052,6 +1083,203 @@ export default function Home() {
           </div>
         </section>
 
+        <section className={`${styles.testimonials} pb_100`}>
+          <div className="container">
+            <div className={`${styles.testimonials_title}`}>
+              <h2 className={`${styles.heading_section1} heading_section`}>
+                Don't believe us?
+              </h2>
+              <p className={`${styles.para} para`}>
+                Hear it from the ones who love Care!
+              </p>
+            </div>
+            <div className={`${styles.customers_say_main} d_flex`}>
+              <Slider
+                {...settings1}
+                asNavFor={nav2 || nav3}
+                ref={(slider1) => setNav1(slider1)}
+                slidesToShow={1}
+                dots={false}
+                className={`${styles.slider} ${styles.slider_content} ${styles.customers_slider_1} custom_new_arrow`}
+              >
+                <div className={`${styles.slider_content_item}`}>
+                  <img src={coments_star.src} />
+                  <p className={`${styles.para} para`}>
+                    Signature TBH has excellent aroma. The fragrance also lasts
+                    for a long time. This deodorant is ideal for wearing at
+                    work, at daytime functions, and with casual outfits.
+                  </p>
+                  <p className={` ${styles.person_name} para f_w_m`}>
+                    Anuj Kumar Saroj
+                  </p>
+                </div>
+                <div className={`${styles.slider_content_item}`}>
+                  <img src={coments_star.src} />
+                  <p className={`${styles.para} para `}>
+                    Superb Smell!!! The best part of Signature Yolo is that it
+                    instantly uplifts my mood. I'm totally in love with this
+                    perfume. Comes at a very affordable price. I'm definitely
+                    gonna buy it again!
+                  </p>
+                  <p className={` ${styles.person_name} para f_w_m`}>
+                    Nirav Patva
+                  </p>
+                </div>
+                <div className={`${styles.slider_content_item}`}>
+                  <img src={coments_star.src} />
+                  <p className={`${styles.para} para `}>
+                    I am super impressed with Signature Cocktail. Classic &
+                    energetic, the fragrance is a pleasure to wear. This perfume
+                    keeps me feeling refreshed all day long.
+                  </p>
+                  <p className={` ${styles.person_name} para f_w_m`}>
+                    Lalit Chauhan
+                  </p>
+                </div>
+                <div className={`${styles.slider_content_item}`}>
+                  <img src={coments_star.src} />
+                  <p className={`${styles.para} para `}>
+                    Having tried almost every popular room freshener,
+                    Signature's product is the only one I would recommend to
+                    anyone as a pocket-friendly, great smelling and long-lasting
+                    alternative.
+                  </p>
+                  <p className={` ${styles.person_name} para f_w_m`}>
+                    Vishal Bhogayta
+                  </p>
+                </div>
+                <div className={`${styles.slider_content_item}`}>
+                  <img src={coments_star.src} />
+                  <p className={`${styles.para} para`}>
+                    I was blown away by the scent of the Signature Amour
+                    perfume. I found it suitable for my skin. Its scent
+                    refreshes the mind and lasts for hours. Everyone around me
+                    praised the smell. Thank you, Signature, for enhancing my
+                    charm and persona.
+                  </p>
+                  <p className={` ${styles.person_name} para f_w_m`}>
+                    Darshita Sanghrajka
+                  </p>
+                </div>
+              </Slider>
+
+              <Slider
+                {...settings2}
+                asNavFor={nav3}
+                ref={(slider2) => setNav2(slider2)}
+                slidesToShow={1}
+                dots={false}
+                className={`${styles.slider} ${styles.slider_img} ${styles.customers_slider_2}`}
+              >
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img
+                      className={`${styles.img_radius}`}
+                      src={Anuj_Kumar_Saroj.src}
+                    />
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img
+                      className={`${styles.img_radius}`}
+                      src={Anuj_Kumar_Saroj.src}
+                    />
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img
+                      className={`${styles.img_radius}`}
+                      src={Anuj_Kumar_Saroj.src}
+                    />
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img
+                      className={`${styles.img_radius}`}
+                      src={Anuj_Kumar_Saroj.src}
+                    />
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img
+                      className={`${styles.img_radius}`}
+                      src={Anuj_Kumar_Saroj.src}
+                    />
+                  </div>
+                </div>
+              </Slider>
+              <Slider
+                {...settings3}
+                asNavFor={nav2}
+                ref={(slider3) => setNav3(slider3)}
+                slidesToShow={2}
+                dots={false}
+                className={`${styles.slider} ${styles.slider_img} ${styles.customers_slider_3}`}
+              >
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img
+                      className={`${styles.img_radius}`}
+                      src={Anuj_Kumar_Saroj.src}
+                    />
+                    <p className={`para ${styles.person_name} f_w_m`}>
+                      Nirav Patva
+                    </p>
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img
+                      className={`${styles.img_radius}`}
+                      src={Anuj_Kumar_Saroj.src}
+                    />
+                    <p className={`para ${styles.person_name} f_w_m`}>
+                      Nirav Patva
+                    </p>
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img
+                      className={`${styles.img_radius}`}
+                      src={Anuj_Kumar_Saroj.src}
+                    />
+                    <p className={`para ${styles.person_name} f_w_m`}>
+                      Nirav Patva
+                    </p>
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img
+                      className={`${styles.img_radius}`}
+                      src={Anuj_Kumar_Saroj.src}
+                    />
+                    <p className={`para ${styles.person_name} f_w_m`}>
+                      Nirav Patva
+                    </p>
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img
+                      className={`${styles.img_radius}`}
+                      src={Anuj_Kumar_Saroj.src}
+                    />
+                    <p className={`para ${styles.person_name} f_w_m`}>
+                      Nirav Patva
+                    </p>
+                  </div>
+                </div>
+              </Slider>
+            </div>
+          </div>
+        </section>
+
         <section className={`${styles.contact_us_main}`} id="contact_us">
           <div className="container">
             <div className={`${styles.contact_flex}`}>
@@ -1082,10 +1310,7 @@ export default function Home() {
                 <p className={`${styles.para} para link_txt flex_start`}>
                   {/* <img src="img/home/location.png" alt="mail"> */}
                   <img src={location1.src} alt="" />
-                  <a
-                    className={`${styles.para} para`}
-                    href="javascript:void(0)"
-                  >
+                  <a className={`${styles.para} para`} href="">
                     Ban House, Opp. Swaminarayan Temple, Kalawad Road, Rajkot
                     360001. (Gujarat) INDIA
                   </a>
