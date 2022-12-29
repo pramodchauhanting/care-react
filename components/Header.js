@@ -65,7 +65,7 @@ const Header = () => {
                   to="about_us"
                   spy={true}
                   smooth={true}
-                  offset={50}
+                  offset={-50}
                   duration={500}
                   className={`${styles.menu_link}`}
                 >
@@ -81,7 +81,7 @@ const Header = () => {
                   to="our_secret"
                   spy={true}
                   smooth={true}
-                  offset={50}
+                  offset={-50}
                   duration={500}
                   className={`${styles.menu_link}`}
                 >
@@ -97,7 +97,7 @@ const Header = () => {
                   to="video"
                   spy={true}
                   smooth={true}
-                  offset={50}
+                  offset={-80}
                   duration={500}
                   className={`${styles.menu_link}`}
                 >
@@ -113,7 +113,7 @@ const Header = () => {
                   to="product_collection"
                   spy={true}
                   smooth={true}
-                  offset={50}
+                  offset={-50}
                   duration={500}
                   className={`${styles.menu_link}`}
                 >
@@ -129,7 +129,7 @@ const Header = () => {
                   to="testimonial"
                   spy={true}
                   smooth={true}
-                  offset={50}
+                  offset={-80}
                   duration={500}
                   className={`${styles.menu_link}`}
                 >
@@ -146,7 +146,7 @@ const Header = () => {
                   to="contact_us"
                   spy={true}
                   smooth={true}
-                  offset={50}
+                  offset={-50}
                   duration={500}
                   className={`${styles.menu_link}`}
                 >
