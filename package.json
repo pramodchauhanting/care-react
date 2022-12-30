@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "graphql-request": "^5.1.0",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -17,6 +18,7 @@
     "react-slick": "^0.29.0",
     "react-tabs": "^6.0.0",
     "sass": "^1.55.0",
+    "scroll-out": "^2.2.12",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
