@@ -98,6 +98,9 @@ export default function Home() {
   // }, []);
 
   useEffect(() => {
+    ScrollOut({
+      /* options */
+    });
     const query1 = gql`
       {
         prductcategories {
@@ -477,31 +480,33 @@ export default function Home() {
                                     alt=""
                                   />
                                   <img
-                                    src={productItem.productHoverimg.url}
+                                    src={
+                                      productItem.product[0].productHoverimg.url
+                                    }
                                     className={`${styles.hover_img}`}
                                     alt=""
                                   />
                                 </div>
                                 <div className={`${styles.box_new_content}`}>
                                   <p className={`${styles.p_name} para`}>
-                                    {productItem.title}
+                                    {productItem.product[0].title}
                                   </p>
                                   <div className={`${styles.quantity}`}>
                                     <p className={`${styles.txt_num} para`}>
-                                      {productItem.productBags}
+                                      {productItem.product[0].productBags}
                                     </p>
                                     <ul>
-                                      <li>14g {productItem.productGram}</li>
+                                      <li>{productItem.productGram}</li>
                                     </ul>
                                   </div>
                                   <p className={`${styles.price_txt} para`}>
-                                    {productItem.productPrice}
+                                    {productItem.product[0].productPrice}
                                   </p>
                                 </div>
                                 <div className={`${styles.btn_section}`}>
                                   <a
                                     target="_blank"
-                                    href={productItem.productLink}
+                                    href={productItem.product[0].productLink}
                                     className={`${styles.btn_txt_one} btn_txt`}
                                   >
                                     Shop Now on
@@ -539,9 +544,7 @@ export default function Home() {
                                   {productItem.product[0].productBags}
                                 </p>
                                 <ul>
-                                  <li>
-                                    14g {productItem.product[0].productGram}
-                                  </li>
+                                  <li>{productItem.product[0].productGram}</li>
                                 </ul>
                               </div>
                               <p className={`${styles.price_txt} para`}>
