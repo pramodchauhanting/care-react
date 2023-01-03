@@ -127,9 +127,6 @@ export default function Home() {
       setItemsCat(data.prductcategories),
     ]);
   }, []);
-  {
-    data1.map((item, ind) => console.log(item.product));
-  }
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const [nav3, setNav3] = useState();
@@ -160,8 +157,8 @@ export default function Home() {
     dots: false,
     infinite: true,
     speed: 500,
-    // slidesToShow: filteredItems?.length <= 4 ? filteredItems?.length : 4,
-    slidesToShow: 4,
+    slidesToShow: filteredItems?.length <= 4 ? filteredItems?.length : 4,
+    // slidesToShow: 4,
     slidesToScroll: 1,
     prevArrow: (
       <button className={`${styles.prevarrow} about_prevarrow`}>
@@ -173,24 +170,31 @@ export default function Home() {
         <img src={arrow_slider.src} alt="" />
       </button>
     ),
-    // responsive: [
-    //   {
-    //     breakpoint: 1199,
-    //     settings: {
-    //       slidesToShow: filteredItems?.length <= 3 ? filteredItems?.length : 3,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 1,
-    //     },
-    //   },
-    // ],
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: filteredItems?.length <= 3 ? filteredItems?.length : 3,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: filteredItems?.length <= 2 ? filteredItems?.length : 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const handleChangeCat = ({ cat }) => {
     setIsActive(cat);
+    console.log(cat);
     if (cat === "All") {
       setFilterdItems(items);
     } else {
@@ -201,7 +205,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    console.log(filteredItems?.length);
+    // console.log(filteredItems?.length);
   });
 
   return (
@@ -333,71 +337,6 @@ export default function Home() {
                     </p>
                   </div>
                 ))}
-
-              {/* <div className={`${styles.unique_content} toTop`} data-scroll>
-                <div className={`${styles.unique_icon}`}>
-                  <img src={stapler_pin.src} alt="" />
-                </div>
-                <p className={`${styles.para} para`} data-scroll>
-                  Stapler pin free packing
-                </p>
-              </div>
-              <div className={`${styles.unique_content} toTop`} data-scroll>
-                <div className={`${styles.unique_icon}`}>
-                  <img src={plastic_free.src} alt="" />
-                </div>
-                <p className={`${styles.para} para`} data-scroll>
-                  Plastic free
-                </p>
-              </div>
-              <div className={`${styles.unique_content} toTop`} data-scroll>
-                <div className={`${styles.unique_icon}`}>
-                  <img src={Non_GMO.src} alt="" />
-                </div>
-                <p className={`${styles.para} para`} data-scroll>
-                  Non GMO
-                </p>
-              </div>
-              <div className={`${styles.unique_content} toTop`} data-scroll>
-                <div className={`${styles.unique_icon}`}>
-                  <img src={caffeine_free.src} alt="" />
-                </div>
-                <p className={`${styles.para} para`} data-scroll>
-                  Caffeine free
-                </p>
-              </div>
-              <div className={`${styles.unique_content} toTop`} data-scroll>
-                <div className={`${styles.unique_icon}`}>
-                  <img src={gluten_free.src} alt="" />
-                </div>
-                <p className={`${styles.para} para`} data-scroll>
-                  Gluten free
-                </p>
-              </div>
-              <div className={`${styles.unique_content} toTop`} data-scroll>
-                <div className={`${styles.unique_icon}`}>
-                  <img src={authentic_spices.src} alt="" />
-                </div>
-                <p className={`${styles.para} para`} data-scroll>
-                  Authentic spices
-                </p>
-              </div>
-              <div className={`${styles.unique_content} toTop`} data-scroll>
-                <div className={`${styles.unique_icon}`}>
-                  <img src={artificial_flavours.src} alt="" />
-                </div>
-                <p className={`${styles.para} para`} data-scroll>
-                  No artificial flavours
-                </p>
-              </div>
-              <div className={`${styles.unique_content} toTop`} data-scroll>
-                <div className={`${styles.unique_icon}`}>
-                  <img src={preservatives.src} alt="" />
-                </div>
-                <p className={`${styles.para} para`} data-scroll>
-                  No preservatives
-                </p>
-              </div> */}
             </div>
           </div>
         </section>
@@ -419,27 +358,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
-            {/* <div className={`${styles.video_main} pt_20`}>
-              <img
-                src={video_banner.src}
-                className={`${styles.video_banner} mobile_none img-responsive`}
-                alt=""
-              />
-              <img
-                src={video_mobile_banner.src}
-                className={`${styles.video_banner} mobile_show img-responsive`}
-                alt=""
-              />
-              <div className={`${styles.play_icon}`}>
-                <a
-                  data-fancybox
-                  href="https://www.youtube.com/watch?v=7zGwTxBJqHo"
-                >
-                  <img src={play_icon.src} alt="" />
-                </a>
-              </div>
-            </div> */}
 
             <LightGallery speed={500} plugins={[lgThumbnail, lgZoom, lgVideo]}>
               <a href="https://www.youtube.com/watch?v=7zGwTxBJqHo">
@@ -506,7 +424,7 @@ export default function Home() {
                   <Slider
                     {...product_slider}
                     className={`${
-                      filteredItems.length <= 4 && styles.itemsSlider
+                      filteredItems.length < 4 && styles.itemsSlider
                     }`}
                   >
                     {isActive !== "All"
@@ -622,171 +540,6 @@ export default function Home() {
                         })}
                   </Slider>
                 )}
-
-                {/* </TabPanel> */}
-
-                {/* <TabPanel>
-                  {data1 &&
-                    data1.map((productItem, ind) => (
-                      <div className={`${styles.best_sellers_flex}`}>
-                        <Slider {...product_slider}>
-                          {productItem.product.map((item, ind) => (
-                            <div className={`${styles.best_sellers_box}`}>
-                              <div className={`${styles.best_sellers_content}`}>
-                                <div
-                                  className={`${styles.best_sellers_product}`}
-                                >
-                                  <img
-                                    src={item.productImg.url}
-                                    className="img-responsive"
-                                    alt=""
-                                  />
-                                  <img
-                                    src={item.productHoverimg.url}
-                                    className={`${styles.hover_img}`}
-                                    alt=""
-                                  />
-                                </div>
-                                <div className={`${styles.box_new_content}`}>
-                                  <p className={`${styles.p_name} para`}>
-                                    {item.title}
-                                  </p>
-                                  <div className={`${styles.quantity}`}>
-                                    <p className={`${styles.txt_num} para`}>
-                                      {item.productBags}
-                                    </p>
-                                    <ul>
-                                      <li>{item.productGram}</li>
-                                    </ul>
-                                  </div>
-                                  <p className={`${styles.price_txt} para`}>
-                                    {item.productPrice}
-                                  </p>
-                                </div>
-                                <div className={`${styles.btn_section}`}>
-                                  <a
-                                    target="_blank"
-                                    href={item.productLink}
-                                    className={`${styles.btn_txt_one} btn_txt`}
-                                  >
-                                    Shop Now on
-                                    <img src={amazon_logo.src} alt="" />
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </Slider>
-                      </div>
-                    ))}
-                </TabPanel> */}
-
-                {/* {data1 &&
-                  data1.map((productItem, ind) => (
-                    <TabPanel>
-                      <div className={`${styles.best_sellers_flex}`}>
-                        {productItem.product.length >= 4 ? (
-                          <Slider {...product_slider}>
-                            {productItem.product.map((item, ind) => (
-                              <div className={`${styles.best_sellers_box}`}>
-                                <div
-                                  className={`${styles.best_sellers_content}`}
-                                >
-                                  <div
-                                    className={`${styles.best_sellers_product}`}
-                                  >
-                                    <img
-                                      src={item.productImg.url}
-                                      className="img-responsive"
-                                      alt=""
-                                    />
-                                    <img
-                                      src={item.productHoverimg.url}
-                                      className={`${styles.hover_img}`}
-                                      alt=""
-                                    />
-                                  </div>
-                                  <div className={`${styles.box_new_content}`}>
-                                    <p className={`${styles.p_name} para`}>
-                                      {item.title}
-                                    </p>
-                                    <div className={`${styles.quantity}`}>
-                                      <p className={`${styles.txt_num} para`}>
-                                        {item.productBags}
-                                      </p>
-                                      <ul>
-                                        <li>{item.productGram}</li>
-                                      </ul>
-                                    </div>
-                                    <p className={`${styles.price_txt} para`}>
-                                      {item.productPrice}
-                                    </p>
-                                  </div>
-                                  <div className={`${styles.btn_section}`}>
-                                    <a
-                                      target="_blank"
-                                      href={item.productLink}
-                                      className={`${styles.btn_txt_one} btn_txt`}
-                                    >
-                                      Shop Now on
-                                      <img src={amazon_logo.src} alt="" />
-                                    </a>
-                                  </div>
-                                </div>
-                              </div>
-                            ))}
-                          </Slider>
-                        ) : (
-                          productItem.product.map((item, ind) => (
-                            <div className={`${styles.best_sellers_box}`}>
-                              <div className={`${styles.best_sellers_content}`}>
-                                <div
-                                  className={`${styles.best_sellers_product}`}
-                                >
-                                  <img
-                                    src={item.productImg.url}
-                                    className="img-responsive"
-                                    alt=""
-                                  />
-                                  <img
-                                    src={item.productHoverimg.url}
-                                    className={`${styles.hover_img}`}
-                                    alt=""
-                                  />
-                                </div>
-                                <div className={`${styles.box_new_content}`}>
-                                  <p className={`${styles.p_name} para`}>
-                                    {item.title}
-                                  </p>
-                                  <div className={`${styles.quantity}`}>
-                                    <p className={`${styles.txt_num} para`}>
-                                      {item.productBags}
-                                    </p>
-                                    <ul>
-                                      <li>{item.productGram}</li>
-                                    </ul>
-                                  </div>
-                                  <p className={`${styles.price_txt} para`}>
-                                    {item.productPrice}
-                                  </p>
-                                </div>
-                                <div className={`${styles.btn_section}`}>
-                                  <a
-                                    target="_blank"
-                                    href={item.productLink}
-                                    className={`${styles.btn_txt_one} btn_txt`}
-                                  >
-                                    Shop Now on
-                                    <img src={amazon_logo.src} alt="" />
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          ))
-                        )}
-                      </div>
-                    </TabPanel>
-                  ))} */}
               </Tabs>
             </div>
           </div>

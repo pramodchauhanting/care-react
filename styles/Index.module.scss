@@ -497,6 +497,19 @@
     }
   }
 
+  .itemsSlider {
+    @media screen and (min-width: 1200px) {
+      :global(.slick-slide) {
+        width: 25% !important;
+      }
+    }
+    @media screen and (min-width: 991px) and (max-width: 1199px) {
+      :global(.slick-slide) {
+        width: 33.33% !important;
+      }
+    }
+  }
+
   .best_sellers_flex {
     position: relative;
     display: flex;
@@ -511,7 +524,7 @@
     }
     .best_sellers_box {
       padding: 0px 10px;
-      width: 25%;
+      // width: 25%;
       margin-bottom: 20px;
       // @media screen and (max-width: 1199px) {
       //     width: 33.333%;
