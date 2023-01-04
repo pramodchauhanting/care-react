@@ -48,6 +48,13 @@ import arrow_slider from "../public/home/arrow_slider.png";
 import coments_star from "../public/home/coments_star.png";
 import Anuj_Kumar_Saroj from "../public/home/Anuj_Kumar_Saroj.jpg";
 
+import Soundarya_Thakur from "../public/home/Soundarya_Thakur.jpg";
+import Kiran_Mehra from "../public/home/Kiran_Mehra.jpg";
+import Dia from "../public/home/Dia.jpg";
+import Gazal_Rai from "../public/home/Gazal_Rai.jpg";
+import Lakhan from "../public/home/Lakhan.jpg";
+import Madalsa_Sharma from "../public/home/Madalsa_Sharma.jpg";
+
 export default function Home() {
   const [data1, setData1] = useState([]);
   const [data2, setData2] = useState([]);
@@ -567,60 +574,71 @@ export default function Home() {
                 <div className={`${styles.slider_content_item}`}>
                   <img src={coments_star.src} />
                   <p className={`${styles.para} para`}>
-                    Signature TBH has excellent aroma. The fragrance also lasts
-                    for a long time. This deodorant is ideal for wearing at
-                    work, at daytime functions, and with casual outfits.
+                    My mornings call for a cup of positivitea with Care. My
+                    favourite out of these five is Ashwagandha Spiced Green Tea.
+                    You let me know yours! Go and Buy Care Green Tea at India's
+                    Best Online Shopping Portals.
                   </p>
                   <p className={` ${styles.person_name} para f_w_m`}>
-                    Anuj Kumar Saroj
+                    Soundarya Thakur
                   </p>
                 </div>
                 <div className={`${styles.slider_content_item}`}>
                   <img src={coments_star.src} />
                   <p className={`${styles.para} para `}>
-                    Superb Smell!!! The best part of Signature Yolo is that it
-                    instantly uplifts my mood. I'm totally in love with this
-                    perfume. Comes at a very affordable price. I'm definitely
-                    gonna buy it again!
+                    Made with 100% natural ayurvedic ingredients. Keeping myself
+                    fit with Care green tea. What a good way to start your day.
+                    It improves metabolism, detoxification, builds immunity, and
+                    keeps you look youthful. Also, it has ashwagandha in it
+                    which helps to manage desired sugar level and youthfulness.
                   </p>
                   <p className={` ${styles.person_name} para f_w_m`}>
-                    Nirav Patva
+                    Kiran Mehra
                   </p>
                 </div>
                 <div className={`${styles.slider_content_item}`}>
                   <img src={coments_star.src} />
                   <p className={`${styles.para} para `}>
-                    I am super impressed with Signature Cocktail. Classic &
-                    energetic, the fragrance is a pleasure to wear. This perfume
-                    keeps me feeling refreshed all day long.
+                    Your daily fix of immunity boosting ingredients. Green tea
+                    may help detox your body and it's important to do
+                    detoxification and here comes Care, which helps me in
+                    detoxification and helps in maintaining good health, fitness
+                    with their 3 amazing ranges of green tea.
                   </p>
-                  <p className={` ${styles.person_name} para f_w_m`}>
-                    Lalit Chauhan
-                  </p>
+                  <p className={` ${styles.person_name} para f_w_m`}>Dia</p>
                 </div>
                 <div className={`${styles.slider_content_item}`}>
                   <img src={coments_star.src} />
                   <p className={`${styles.para} para `}>
-                    Having tried almost every popular room freshener,
-                    Signature's product is the only one I would recommend to
-                    anyone as a pocket-friendly, great smelling and long-lasting
-                    alternative.
+                    Bringing together all the best ayurvedic ingredients to give
+                    you a glass of Immunity. Since childhood my father has given
+                    me only one remedy for everything -TURMERIC. Naturally
+                    during these times when health became a priority I had to
+                    choose a product which I could connect the most with.
                   </p>
                   <p className={` ${styles.person_name} para f_w_m`}>
-                    Vishal Bhogayta
+                    Gazal Rai
                   </p>
                 </div>
                 <div className={`${styles.slider_content_item}`}>
                   <img src={coments_star.src} />
                   <p className={`${styles.para} para`}>
-                    I was blown away by the scent of the Signature Amour
-                    perfume. I found it suitable for my skin. Its scent
-                    refreshes the mind and lasts for hours. Everyone around me
-                    praised the smell. Thank you, Signature, for enhancing my
-                    charm and persona.
+                    Tried Care green tea and loved it! Have you tried it yet? My
+                    favorite ashwagandha green tea to boast my immunity and stay
+                    fit and fresh!!
+                  </p>
+                  <p className={` ${styles.person_name} para f_w_m`}>Lakhan</p>
+                </div>
+                <div className={`${styles.slider_content_item}`}>
+                  <img src={coments_star.src} />
+                  <p className={`${styles.para} para`}>
+                    Winters increase my love for tea, try the immunity boosting
+                    tea only from Care Health Benefits : Builds Immunity Helps
+                    Detoxification Keeps You Look Youthful Enhance Metabolism.
+                    Go for it!
                   </p>
                   <p className={` ${styles.person_name} para f_w_m`}>
-                    Darshita Sanghrajka
+                    Madalsa Sharma
                   </p>
                 </div>
               </Slider>
@@ -637,7 +655,7 @@ export default function Home() {
                   <div className={`${styles.slider_img_item_content}`}>
                     <img
                       className={`${styles.img_radius}`}
-                      src={Anuj_Kumar_Saroj.src}
+                      src={Soundarya_Thakur.src}
                     />
                   </div>
                 </div>
@@ -645,31 +663,33 @@ export default function Home() {
                   <div className={`${styles.slider_img_item_content}`}>
                     <img
                       className={`${styles.img_radius}`}
-                      src={Anuj_Kumar_Saroj.src}
+                      src={Kiran_Mehra.src}
                     />
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img className={`${styles.img_radius}`} src={Dia.src} />
                   </div>
                 </div>
                 <div className={`${styles.slider_img_item}`}>
                   <div className={`${styles.slider_img_item_content}`}>
                     <img
                       className={`${styles.img_radius}`}
-                      src={Anuj_Kumar_Saroj.src}
+                      src={Gazal_Rai.src}
                     />
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img className={`${styles.img_radius}`} src={Lakhan.src} />
                   </div>
                 </div>
                 <div className={`${styles.slider_img_item}`}>
                   <div className={`${styles.slider_img_item_content}`}>
                     <img
                       className={`${styles.img_radius}`}
-                      src={Anuj_Kumar_Saroj.src}
-                    />
-                  </div>
-                </div>
-                <div className={`${styles.slider_img_item}`}>
-                  <div className={`${styles.slider_img_item_content}`}>
-                    <img
-                      className={`${styles.img_radius}`}
-                      src={Anuj_Kumar_Saroj.src}
+                      src={Madalsa_Sharma.src}
                     />
                   </div>
                 </div>
@@ -686,10 +706,44 @@ export default function Home() {
                   <div className={`${styles.slider_img_item_content}`}>
                     <img
                       className={`${styles.img_radius}`}
-                      src={Anuj_Kumar_Saroj.src}
+                      src={Kiran_Mehra.src}
                     />
                     <p className={`para ${styles.person_name} f_w_m`}>
-                      Nirav Patva
+                      Kiran Mehra
+                    </p>
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img className={`${styles.img_radius}`} src={Dia.src} />
+                    <p className={`para ${styles.person_name} f_w_m`}>Dia</p>
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img
+                      className={`${styles.img_radius}`}
+                      src={Gazal_Rai.src}
+                    />
+                    <p className={`para ${styles.person_name} f_w_m`}>
+                      Gazal Rai
+                    </p>
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img className={`${styles.img_radius}`} src={Lakhan.src} />
+                    <p className={`para ${styles.person_name} f_w_m`}>Lakhan</p>
+                  </div>
+                </div>
+                <div className={`${styles.slider_img_item}`}>
+                  <div className={`${styles.slider_img_item_content}`}>
+                    <img
+                      className={`${styles.img_radius}`}
+                      src={Madalsa_Sharma.src}
+                    />
+                    <p className={`para ${styles.person_name} f_w_m`}>
+                      Madalsa Sharma
                     </p>
                   </div>
                 </div>
@@ -697,43 +751,10 @@ export default function Home() {
                   <div className={`${styles.slider_img_item_content}`}>
                     <img
                       className={`${styles.img_radius}`}
-                      src={Anuj_Kumar_Saroj.src}
+                      src={Soundarya_Thakur.src}
                     />
                     <p className={`para ${styles.person_name} f_w_m`}>
-                      Nirav Patva
-                    </p>
-                  </div>
-                </div>
-                <div className={`${styles.slider_img_item}`}>
-                  <div className={`${styles.slider_img_item_content}`}>
-                    <img
-                      className={`${styles.img_radius}`}
-                      src={Anuj_Kumar_Saroj.src}
-                    />
-                    <p className={`para ${styles.person_name} f_w_m`}>
-                      Nirav Patva
-                    </p>
-                  </div>
-                </div>
-                <div className={`${styles.slider_img_item}`}>
-                  <div className={`${styles.slider_img_item_content}`}>
-                    <img
-                      className={`${styles.img_radius}`}
-                      src={Anuj_Kumar_Saroj.src}
-                    />
-                    <p className={`para ${styles.person_name} f_w_m`}>
-                      Nirav Patva
-                    </p>
-                  </div>
-                </div>
-                <div className={`${styles.slider_img_item}`}>
-                  <div className={`${styles.slider_img_item_content}`}>
-                    <img
-                      className={`${styles.img_radius}`}
-                      src={Anuj_Kumar_Saroj.src}
-                    />
-                    <p className={`para ${styles.person_name} f_w_m`}>
-                      Nirav Patva
+                      Soundarya Thakur
                     </p>
                   </div>
                 </div>

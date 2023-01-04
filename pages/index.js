@@ -273,7 +273,7 @@ export default function Home() {
                   <h2 className={`${styles.heading_section} heading_section `}>
                     Tea & Ayurveda
                   </h2>
-                  <h3 className={`${styles.sub_title}`}>
+                  <h3 className={`${styles.sub_title} sub_title`}>
                     A Herbal Heritage For Holistic Health
                   </h3>
                 </div>

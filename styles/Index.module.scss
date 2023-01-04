@@ -156,7 +156,13 @@
       .sub_title {
         margin-top: 15px;
         margin-bottom: 30px;
+        font-size: 22px;
+        line-height: 26px;
+        font-weight: normal; 
+        font-family: var(--libre_baskerville_bold);
+        color: #907636;
         @media screen and (max-width: 767px) {
+          font-size: 22px;
           margin-bottom: 25px;
         }
       }
