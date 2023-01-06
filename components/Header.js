@@ -61,13 +61,14 @@ const Header = () => {
                   About Us
                 </a> */}
                 <Link
+                  onClick={() => setSidebarActive(!sidebarActive)}
                   activeClass="active"
                   to="about_us"
                   spy={true}
                   smooth={true}
                   offset={-50}
                   duration={500}
-                  className={`${styles.menu_link}`}
+                  className={`${styles.menu_link} `}
                 >
                   About Us
                 </Link>
@@ -77,6 +78,7 @@ const Header = () => {
                   What’s Our Secret
                 </a> */}
                 <Link
+                  onClick={() => setSidebarActive(!sidebarActive)}
                   activeClass="active"
                   to="our_secret"
                   spy={true}
@@ -93,6 +95,7 @@ const Header = () => {
                   Video
                 </a> */}
                 <Link
+                  onClick={() => setSidebarActive(!sidebarActive)}
                   activeClass="active"
                   to="video"
                   spy={true}
@@ -109,6 +112,7 @@ const Header = () => {
                   Products
                 </a> */}
                 <Link
+                  onClick={() => setSidebarActive(!sidebarActive)}
                   activeClass="active"
                   to="product_collection"
                   spy={true}
@@ -125,6 +129,7 @@ const Header = () => {
                   Reviews
                 </a> */}
                 <Link
+                  onClick={() => setSidebarActive(!sidebarActive)}
                   activeClass="active"
                   to="testimonial"
                   spy={true}
@@ -142,6 +147,7 @@ const Header = () => {
                   Contact Us
                 </a> */}
                 <Link
+                  onClick={() => setSidebarActive(!sidebarActive)}
                   activeClass="active"
                   to="contact_us"
                   spy={true}

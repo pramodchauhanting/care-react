@@ -16,8 +16,6 @@ import styles from "../styles/Index.module.scss";
 
 //image import
 
-import logo from "../public/logo.png";
-
 import Banner from "../sections/banner";
 import About from "../sections/About";
 import OurSecret from "../sections/Our-Secret";
@@ -26,6 +24,7 @@ import Reviews from "../sections/Reviews";
 import Contact from "../sections/contact";
 import Product from "../sections/Product";
 import Script from "next/script";
+import Loader from "../sections/loader";
 
 export default function Home() {
   useEffect(() => {
@@ -56,11 +55,7 @@ export default function Home() {
         <title>Care</title>
       </Head>
       <Header />
-      {/* <div className="loader_overlay">
-        <div className="container">
-          <img src={logo.src} alt="loader logo" />
-        </div>
-      </div> */}
+      <Loader />
       <main className={styles.main}>
         <Banner />
         <About />
