@@ -1,0 +1,26 @@
+.about_signature {
+  background-color: var(--primary-color);
+  position: relative;
+  .about_signature_flex {
+    .about_signature_content {
+      text-align: center;
+      .heading_section {
+        color: #d8b152;
+        width: 80%;
+        margin: 0 auto;
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
+      }
+      .para {
+        padding-top: 30px;
+        width: 60%;
+        margin: 0 auto;
+        color: var(--white-color);
+        @media screen and (max-width: 1199px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
