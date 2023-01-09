@@ -1,8 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "../styles/sections/Banner.module.scss";
 import Image from "next/image";
+import { useEffect } from "react";
 import bottom_wave from "../public/home/bottom_wave.png";
 const Banner = () => {
+  useEffect(() => {
+    // window.addEventListener("load", (event) => {
+    //   console.log("page is fully loaded");
+    //   let bannerItem = event.querySelector(".banner_item");
+    //   let textSection = event.querySelector(".banner_item");
+    //   bannerItem.addList.add("zoomin");
+    //   textSection.addList.add("fadeUp");
+    // });
+  }, []);
   return (
     <div className={`${styles.banner}`}>
       <div className={`${styles.banner_slider}`}>

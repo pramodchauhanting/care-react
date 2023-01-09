@@ -8,7 +8,7 @@ const Loader = () => {
     }, 500);
     setTimeout(function () {
       anim.style.display = "none";
-    }, 800);
+    }, 2500);
   }, []);
   return (
     <div className="loader_overlay dd" id="loader_ani">
