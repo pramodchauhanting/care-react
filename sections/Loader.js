@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import logo from "../public/logo.png";
 import { useState, useEffect, useRef } from "react";
 const Loader = () => {
@@ -11,7 +12,7 @@ const Loader = () => {
     }, 2500);
   }, []);
   return (
-    <div className="loader_overlay dd" id="loader_ani">
+    <div className="loader_overlay" id="loader_ani">
       <div className="container">
         <img src={logo.src} alt="loader logo" />
       </div>

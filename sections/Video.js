@@ -11,12 +11,24 @@ import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 import "lightgallery/css/lg-video.css";
+import ScrollOut from "scroll-out";
+import { useEffect } from "react";
 
 import video_banner from "../public/home/video_banner.jpg";
 import video_mobile_banner from "../public/home/video_mobile_banner.jpg";
 import play_icon from "../public/home/play_icon.png";
 import video_bg from "../public/home/video_bg.png";
 const Video = () => {
+  useEffect(() => {
+    ScrollOut({
+      targets: ".video_main",
+      threshhold: 0.5,
+      cssProps: {
+        visibleY: true,
+      },
+    });
+  }, []);
+
   return (
     <section className={`${styles.unique_description}`} name="video">
       <div className="container">
@@ -38,7 +50,7 @@ const Video = () => {
 
         <LightGallery speed={500} plugins={[lgThumbnail, lgZoom, lgVideo]}>
           <a href="https://www.youtube.com/watch?v=7zGwTxBJqHo">
-            <div className={`${styles.video_main} pt_20 toTop`} data-scroll>
+            <div className={`${styles.video_main} video_main pt_20`}>
               <img
                 src={video_banner.src}
                 className={`${styles.video_banner} mobile_none img-responsive`}
