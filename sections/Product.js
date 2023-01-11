@@ -135,7 +135,7 @@ const About = () => {
           </div>
 
           <Tabs className={`${styles.tab_custom_list}`}>
-            <div className={`${styles.tab_custom_scroll}`}>
+            <div className={`${styles.tab_custom_scroll} tab_custom_scroll`}>
               <TabList>
                 <Tab onClick={() => handleChangeCat({ cat: "All" })}>All</Tab>
                 {data1 &&
