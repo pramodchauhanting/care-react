@@ -25,23 +25,6 @@
           margin: 10px 0px 30px;
         }
       }
-
-      &.fadeUp {
-        animation: fadeUp 2s;
-        // opacity: 0;
-        animation-fill-mode: both;
-        // transform: translateY(100%);
-      }
-      @keyframes fadeUp {
-        0% {
-          transform: translateY(100%);
-          opacity: 0;
-        }
-        100% {
-          transform: translateY(0%);
-          opacity: 1;
-        }
-      }
     }
     .banner_item {
       height: calc(100vw * 767 / 1440);
@@ -66,20 +49,6 @@
       @media screen and (max-width: 767px) {
         background-image: url(../../public/home/banner_mobile.jpg);
         height: 600px;
-      }
-      &.zoomin {
-        // background-size: 100% 100%;
-        background-position: center center;
-        animation: shrink 5s;
-        animation-fill-mode: both;
-      }
-      @keyframes shrink {
-        0% {
-          background-size: 110% 110%;
-        }
-        100% {
-          background-size: 100% 100%;
-        }
       }
     }
     .bottom_wave {
