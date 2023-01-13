@@ -141,6 +141,7 @@ const About = () => {
                 {data1 &&
                   data1.map((productItem, ind) => (
                     <Tab
+                      key={ind}
                       onClick={() => [
                         handleChangeCat({ cat: `${productItem.title}` }),
                       ]}
