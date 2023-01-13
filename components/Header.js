@@ -2,8 +2,9 @@
 import styles from "../styles/components/Header.module.scss";
 
 import * as Scroll from "react-scroll";
+import Link from "next/link";
 import {
-  Link,
+  Link as ScrollSection,
   Button,
   Element,
   Events,
@@ -26,11 +27,11 @@ const Header = () => {
         <nav className={`${styles.navbar}`}>
           <div className={`${styles.mobile_wrap}`}>
             <div className={`${styles.logo}`}>
-              <a className={`${styles.brand}`}>
-                {/* <img src="logo.png" alt="logo" /> */}
-                <img src={logo.src} alt="" />
-                {/* <Image src="/logo.png" alt="logo" width={93} height={55} /> */}
-              </a>
+              <Link href="/">
+                <a className={`${styles.brand}`}>
+                  <img src={logo.src} alt="" />
+                </a>
+              </Link>
             </div>
 
             <button
@@ -60,7 +61,7 @@ const Header = () => {
                 {/* <a className={`${styles.menu_link}`} href="#about_us">
                   About Us
                 </a> */}
-                <Link
+                <ScrollSection
                   onClick={() => setSidebarActive(!sidebarActive)}
                   activeClass="active"
                   to="about_us"
@@ -71,13 +72,13 @@ const Header = () => {
                   className={`${styles.menu_link} `}
                 >
                   About Us
-                </Link>
+                </ScrollSection>
               </li>
               <li className={`${styles.menu_item}`}>
                 {/* <a className={`${styles.menu_link}`} href="#our_secret">
                   What’s Our Secret
                 </a> */}
-                <Link
+                <ScrollSection
                   onClick={() => setSidebarActive(!sidebarActive)}
                   activeClass="active"
                   to="our_secret"
@@ -88,13 +89,13 @@ const Header = () => {
                   className={`${styles.menu_link}`}
                 >
                   What’s Our Secret
-                </Link>
+                </ScrollSection>
               </li>
               <li className={`${styles.menu_item}`}>
                 {/* <a className={`${styles.menu_link}`} href="#video">
                   Video
                 </a> */}
-                <Link
+                <ScrollSection
                   onClick={() => setSidebarActive(!sidebarActive)}
                   activeClass="active"
                   to="video"
@@ -105,13 +106,13 @@ const Header = () => {
                   className={`${styles.menu_link}`}
                 >
                   Video
-                </Link>
+                </ScrollSection>
               </li>
               <li className={`${styles.menu_item}`}>
                 {/* <a className={`${styles.menu_link}`} href="#product_collection">
                   Products
                 </a> */}
-                <Link
+                <ScrollSection
                   onClick={() => setSidebarActive(!sidebarActive)}
                   activeClass="active"
                   to="product_collection"
@@ -122,13 +123,13 @@ const Header = () => {
                   className={`${styles.menu_link}`}
                 >
                   Products
-                </Link>
+                </ScrollSection>
               </li>
               <li className={`${styles.menu_item}`}>
                 {/* <a className={`${styles.menu_link}`} href="#testimonial">
                   Reviews
                 </a> */}
-                <Link
+                <ScrollSection
                   onClick={() => setSidebarActive(!sidebarActive)}
                   activeClass="active"
                   to="testimonial"
@@ -139,14 +140,14 @@ const Header = () => {
                   className={`${styles.menu_link}`}
                 >
                   Reviews
-                </Link>
+                </ScrollSection>
               </li>
 
               <li className={`${styles.menu_item}`}>
                 {/* <a className={`${styles.menu_link}`} href="#contact_us">
                   Contact Us
                 </a> */}
-                <Link
+                <ScrollSection
                   onClick={() => setSidebarActive(!sidebarActive)}
                   activeClass="active"
                   to="contact_us"
@@ -157,7 +158,7 @@ const Header = () => {
                   className={`${styles.menu_link}`}
                 >
                   Contact Us
-                </Link>
+                </ScrollSection>
               </li>
             </ul>
           </div>
