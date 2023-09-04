@@ -99,6 +99,9 @@ const About = () => {
         },
       },
     ],
+    afterChange: (i) => {
+      fillProgress(i + 1);
+    },
   };
 
   const handleChangeCat = ({ cat }) => {
@@ -113,9 +116,13 @@ const About = () => {
     }
   };
 
+  const [progressWidth, setProgressWidth] = useState(0);
   useEffect(() => {
-    // console.log(filteredItems?.length);
-  });
+    fillProgress(1);
+  }, []);
+  const fillProgress = (currInd) => {
+    setProgressWidth((currInd / 9) * 100);
+  };
   return (
     <section
       className={`${styles.best_sellers} ptb_100`}
@@ -265,6 +272,16 @@ const About = () => {
               </Slider>
             )}
           </Tabs>
+        </div>
+        <div className="container">
+          <div className={`${styles.progress_div} pb_100`}>
+            <div className={`${styles.progress_bar}`}>
+              <div
+                style={{ width: `${progressWidth}%` }}
+                className={`${styles.color_div}`}
+              ></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
